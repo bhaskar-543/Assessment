@@ -1,0 +1,17 @@
+
+.btn-light:hover
+     {
+        border-bottom: 3px solid rgb(33, 40, 53); 
+    }
+
+    table.scrolldown tbody {
+              
+        /* Set the height of table body */
+        height: 50px; 
+          
+        /* Set vertical scroll */
+        overflow-y: auto;
+          
+        /* Hide the horizontal scroll */
+        overflow-x: hidden; 
+    }
