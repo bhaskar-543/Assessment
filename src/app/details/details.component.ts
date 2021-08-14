@@ -22,18 +22,18 @@ export class DetailsComponent implements OnInit {
 
   searchFilter(name){
     
-    this.filteredData = this.listData.filter((item)=> (item["list_name"].toLowerCase()).includes(name.toLowerCase()))
+    this.filteredData = this.listData.filter((item)=> (item["name"].toLowerCase()).includes(name.toLowerCase()))
     
   }
 
   displayDetails(list_name){
    
     this.listData.forEach(element => {
-      if(element.list_name == list_name){
+      if(element.name == list_name){
         this.details=element.details;
       }
     });
-    console.log("---------->details",this.details);
+    // console.log("---------->details",this.details);
     
   }
 

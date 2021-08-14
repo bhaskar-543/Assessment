@@ -37,21 +37,21 @@
             <div class="left-content">
                 <table class="table table-hover">
                     <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Item Name</th>
-                            <th>No. of Entities</th>
-                            <th>Actions</th>
+                        <tr style="color: rgb(185, 179, 179);">
+                            <th class="text-center">Date</th>
+                            <th >Item Name</th>
+                            <th class="text-center">No. of Entities</th>
+                            <th class="text-center">Actions</th>
                             <th></th>
                         </tr>
 
                     </thead>
                     <tbody>
                         <tr *ngFor="let item of filteredData">
-                            <td>{{item.date | date: 'MMM dd'}}</td>
-                            <td ><strong>{{item.list_name}}</strong></td>
+                            <td class="text-center">{{item.date | date: 'MMM dd'}}</td>
+                            <td ><strong>{{item.name}}</strong></td>
                             <td style="text-align:center">{{item['details'].length}}</td>
-                            <td>
+                            <td class="text-center">
                                 <span>
                                     <i class="bi bi-envelope"></i>&nbsp;&nbsp;
                                     <i class="bi bi-share"></i>&nbsp;&nbsp;
@@ -60,7 +60,7 @@
                                 </span>
                             </td>
                             <td><button type="button" class="btn btn-light btn-sm"
-                                    (click)="displayDetails(item.list_name)">Details</button></td>
+                                    (click)="displayDetails(item.name)">Details</button></td>
                         </tr>
 
                     </tbody>
@@ -70,11 +70,11 @@
         <div class="col-md-3">
             <div class="right-content" style="padding: 1em;">
                 <div style="background-color: ghostwhite; height: 40px;">
-                    <p class="align-center" style="font-size: 12px;text-align:center;">No description yet <a
+                    <p class="text-center" style="font-size: 12px;text-align:center;">No description yet <a
                             href="#">+Add Description</a></p>
                 </div>
                 <ul style="list-style: none;" *ngFor="let item of details">
-                    <li class="text-primary">{{item}}</li>
+                    <li class="text-primary text-start">{{item}}</li>
                 </ul>
             </div>
         </div>
