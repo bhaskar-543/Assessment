@@ -46,7 +46,8 @@
                         </tr>
 
                     </thead>
-                    <tbody>
+                    <tbody *ngIf = "filteredData.length >0;else emptyTable">
+                        
                         <tr *ngFor="let item of filteredData">
                             <td class="text-center">{{item.date | date: 'MMM dd'}}</td>
                             <td ><strong>{{item.name}}</strong></td>
@@ -62,8 +63,13 @@
                             <td><button type="button" class="btn btn-light btn-sm"
                                     (click)="displayDetails(item.name)">Details</button></td>
                         </tr>
-
+                    
+                   
                     </tbody>
+                    <ng-template #emptyTable>
+                        <p class="text-center"><i>No Data Found</i></p>
+                    </ng-template>
+
                 </table>
             </div>
         </div>
